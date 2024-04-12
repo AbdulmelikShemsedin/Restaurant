@@ -19,3 +19,15 @@ body {
 .name {
     font-size: 4em;
 }
+
+.page1 p {
+    margin-top: 5px;
+}
+
+,page1 img {
+    position: sticky;
+}
+
+@media (max-width: 600px) {
+    
+}
