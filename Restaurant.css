@@ -22,10 +22,15 @@ body {
 
 .page1 p {
     margin-top: 5px;
+    color: bisque;
 }
 
-,page1 img {
+.page1 img {
     position: sticky;
+}
+
+#table-content {
+    color: bisque;
 }
 
 @media (max-width: 600px) {
