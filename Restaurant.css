@@ -12,27 +12,151 @@ body {
 
 .page1 {
     background: linear-gradient(black, purple);
-    height: 100vh;
+    height: 100dvh;
     padding: 10px;
 }
 
 .name {
-    font-size: 4em;
+    font-size: 5em;
 }
 
-.page1 p {
-    margin-top: 5px;
+.page1 .row p {
+    margin-top: 8px;
     color: bisque;
+    font-size: 1.5em;
 }
 
-.page1 img {
-    position: sticky;
+#page1-table-content {
+    /* color: black; */
+    padding: 50px 0px 0px 120px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-around;
 }
 
-#table-content {
-    color: bisque;
+.profileDecor {
+    background-color: blanchedalmond;
+    width: 400px;
+    border-radius: 20px;
+    color: grey;
+    box-shadow: 0 0 5px 7px blanchedalmond;
 }
 
-@media (max-width: 600px) {
+.profileDecor p {
+    font-size: 25px;
+}
+
+.profileDecor img {
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+}
+
+.location {
+    font-size: 30px;
+    color: hsla(69, 37%, 57%, 0.985);
+    margin-top: 30px;
+}
+
+/* Mobile Phones */
+@media only screen and (max-width: 767px) {
+    .page1 {
+        height: auto;
+    }
     
+    .name {
+        font-size: 2.25em;
+    }
+
+    .page1 .row p {
+        font-size: 1.2em;
+    }
+
+    #page1-table-content {
+        padding: auto;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .profileDecor {
+        scale: 0.75;
+        margin: 0;
+        padding: 0;
+    }
+
+    .profileDecor img {
+        margin: 15px 0 0 0;
+    }
+}
+
+/* Tablets */
+@media only screen and (min-width: 768px) and (max-width: 961px) {
+    .page1 {
+        height: auto;
+    }
+    
+    .name {
+        font-size: 3.5em;
+    }
+
+    .page1 .row p {
+        font-size: 1.25em;
+    }
+
+    .profileDecor {
+        scale: 0.75;
+        margin: 0;
+        padding: 0;
+        position: relative;
+    }
+
+    .profileDecor:first-of-type {
+        left: -130px;
+    }
+
+    .profileDecor:nth-of-type(2) {
+        right: -230px;
+        top: -195px;
+    }
+
+    .profileDecor:nth-of-type(3) {
+        left: -130px;
+        top: -370px;
+    }
+
+    #page1-table-content {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        height: 800px;
+    }
+
+    .location {
+        text-align: end;
+        margin: 0 13px 5px 0;
+    }
+}
+
+/* PC Medium Screen */
+@media only screen and (min-width: 962px) and (max-width: 1361px) {
+    .page1 {
+        height: auto;
+    }
+
+    #page1-table-content {
+        grid-template-columns: 1fr 1fr;
+        height: auto;
+    }
+
+    .profileDecor {
+        scale: 0.85;
+    }
+
+    .profileDecor:nth-of-type(3) {
+        position: relative;
+        left: 200px;
+    }
 }
